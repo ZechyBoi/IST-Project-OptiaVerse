@@ -22,3 +22,21 @@ h2
     text-align: center;
     line-height: 0;
 }
+
+.titleBlock
+{
+    text-align: center;
+    display:flex;
+}
+
+.headerBlock
+{
+    height: 20%;
+}
+
+.TopPart
+{
+    width:auto;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
