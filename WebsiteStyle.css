@@ -1,25 +1,31 @@
 body
 {
-    margin: 8%;
+    background-color: #303030;
 }
 
 h1
 {
-    color: #003535;
-    font-family:'Times New Roman', Times, serif;
-    font-size: 100;
-    font-weight:bolder;
+    color: #fff;
+    font-family: Helvetica;
+    font-weight: bolder;
+    font-size: 100px;
+    font-weight:bold;
     text-align: center;
 }
 
 h2
 {
-    color: #00b3b3;
-    font-family: serif;
-    font-size: 35;
+    color: #3dd2cc;
+    font-family: 'Gill Sans MT';
+    font-size: 50;
     font-weight:bold;
     text-align: center;
-    line-height: 0;
+}
+
+p
+{
+    font-family: Helvetica;
+    color: #fff;
 }
 
 .titleBlock
@@ -30,7 +36,7 @@ h2
 
 .headerBlock
 {
-    height: 20%;
+    height: 30%;
 }
 
 .TopPart
@@ -40,87 +46,187 @@ h2
     background-repeat: no-repeat;
 }
 
-.topnav {
-    background-color: #333;
-    overflow: hidden;
+.buyBlock
+{
+    height: 20px;
+}
+
+.grid-item
+{
+    margin: 10px 5px;
+    padding: 10px;
+    width: 300px;
+    height:fit-content;
+}
+
+.grid-container
+{
     display: flex;
-  justify-content: space-between;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
+    flex-wrap: wrap;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  li{
-    display:inline;
-  }
-
-  /*Aaryan css*/
-  h1{
-    font-family: fantasy;
-    font-size: 80px;
-    color:yellow;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
-    margin-bottom: 0%;
-}
-
-html{
-    background-color: orange;
-}
-
-h2{
-    font-family: cursive;
-    display: flex;
+    align-items: center;
     justify-content: center;
+    margin-top:5px;
 }
+
+.center
+{
+    text-align: center;
+}
+
+button
+{
+    background-color: #15625F;
+    border: 3px solid #3dd2cc;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 60;
+    padding-right: 60;
+    padding-top: 15;
+    padding-bottom: 15;
+    border-radius:20px;
+    cursor: pointer;
+}
+button:hover
+{
+    background-color: #ddd;
+    border: 3px solid #0483aa;
+    color: black;
+}
+button:active
+{
+    background-color: #43d3ff;
+    border: 3px solid #43d3ff;
+    color: black;
+}
+
 .topnav {
-    background-color: #333;
+    background-color: #0E3B39;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
-  }
+}
   
   /* Style the links inside the navigation bar */
-  .topnav a {
+.topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 20px 30px;
     text-decoration: none;
     font-size: 17px;
-  }
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+}
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
+/* Change the color of links on hover */
+.topnav a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
   
   /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #04AA6D;
+.topnav a:active {
+    background-color: #3dd2cc;
     color: white;
+}
+
+li{
+    display:inline-block;
+}
+
+/*Image Hover*/
+  *{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
   }
 
-  li{
-    display:inline;
+  .wrapper{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+
+  .image{
+    width: 300px;
+    position:relative;
+  }
+
+  .content{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background:rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 0.6s;
+  }
+  
+  .content:hover{
+    opacity: 1;
+  }
+
+  .content h1{
+    font-size: 45px;
+    color:#3dd2cc;
+    margin-bottom: 15px;
+  }
+
+  .content p{
+    font-size: 20px;
+    color: #fff;
+  }
+
+  .content > *{
+    transform: translateY(25px);
+    transition: transform 0.6s;
+  }
+
+  .content:hover > *{
+    transform: translateY(0px);
+  }
+
+  .buyContainer
+  {
+    margin-top: 10%;
+    width: 100%;
+  }
+
+.splitCentering {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/*custom scrollbar*/
+::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: transparent;
+  background-color: #303030;
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: #1d6260;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-corner
+{
+  background-color: #34b0ac;
+
+}
